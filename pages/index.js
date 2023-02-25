@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Login from '../components/Login';
+import UserDashboard from '../components/UserDashboard';
 import { useAuth } from '../context/AuthContext';
 
 export default function Home() {
@@ -22,7 +23,6 @@ export default function Home() {
       </Head>
       {!currentUser && <Login />}
       {currentUser && <UserDashboard />}
-      <Login />
     </>
   );
 }
